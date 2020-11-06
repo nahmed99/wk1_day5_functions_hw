@@ -9,8 +9,10 @@ def get_total_cash(pet_shop):
 
 
 def add_or_remove_cash(pet_shop, sum):
-    //Add (or subtract) sum from current total_cash
+    #Add (or subtract) sum from current total_cash
     pet_shop["admin"]["total_cash"] += sum
+
+
 
 
 
