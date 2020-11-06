@@ -1,5 +1,16 @@
 # WRITE YOUR FUNCTIONS HERE
 
-def get_pet_shop_name(list):
-    return list["name"]
+def get_pet_shop_name(pet_shop):
+    return pet_shop["name"]
+
+
+def get_total_cash(pet_shop):
+    return pet_shop["admin"]["total_cash"]
+
+
+def add_or_remove_cash(pet_shop, sum):
+    //Add (or subtract) sum from current total_cash
+    pet_shop["admin"]["total_cash"] += sum
+
+
 
