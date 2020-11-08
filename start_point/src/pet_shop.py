@@ -27,7 +27,7 @@ def get_stock_count(pet_shop):
 
 def get_pets_by_breed(pet_shop, breed):
     # create empty list
-    return_pets = []
+    returned_pets = []
 
     # 'extract' list of pet dictionaries to work with
     pets = pet_shop["pets"]
@@ -35,9 +35,9 @@ def get_pets_by_breed(pet_shop, breed):
     # loop through list of pet dictionaries to find matching breeds
     for pet in pets:
         if pet["breed"] == breed:
-            return_pets.append(pet)
+            returned_pets.append(pet)
 
-    return return_pets
+    return returned_pets
 
 
 def find_pet_by_name(pet_shop, name):
@@ -50,10 +50,17 @@ def find_pet_by_name(pet_shop, name):
 
     for pet in pets:
         if pet["name"] == name:
-            # return the whole pet dictionary!
+            # return the current pet dictionary!
             return pet 
 
     return return_name
 
 
+def remove_pet_by_name(pet_shop, name):
+    # use a slightly different method to access dictionaires than before
+    pet_shop["pets"].remove(find_pet_by_name(pet_shop, name))
+
+
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
 
