@@ -40,5 +40,20 @@ def get_pets_by_breed(pet_shop, breed):
     return return_pets
 
 
+def find_pet_by_name(pet_shop, name):
+
+    # 'extract' list of pet dictionaries to work with
+    pets = pet_shop["pets"]
+
+    # create a variable of 'None' to return in event of not found
+    return_name = None
+
+    for pet in pets:
+        if pet["name"] == name:
+            # return the whole pet dictionary!
+            return pet 
+
+    return return_name
+
 
 
