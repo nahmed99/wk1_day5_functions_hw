@@ -45,6 +45,8 @@ def find_pet_by_name(pet_shop, name):
     # 'extract' list of pet dictionaries to work with
     pets = pet_shop["pets"]
 
+
+    # Returning "None" is not actually required, as if not found, None will automatically be returned.
     # create a variable of 'None' to return in event of not found
     return_name = None
 
@@ -53,7 +55,8 @@ def find_pet_by_name(pet_shop, name):
             # return the current pet dictionary!
             return pet 
 
-    return return_name
+    # Returning "None" is not actually required, as if not found, None will automatically be returned.
+    return return_name 
 
 
 def remove_pet_by_name(pet_shop, name):
