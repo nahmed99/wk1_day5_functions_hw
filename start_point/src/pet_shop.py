@@ -85,12 +85,16 @@ def add_pet_to_customer(customer, new_pet):
 
 
 def customer_can_afford_pet(customer, new_pet):
+    '''
     decision = False
 
     if get_customer_cash(customer) >= new_pet["price"]:
         decision = True
 
     return decision
+    '''
+    # The following could possibly replace all of the above:
+    return get_customer_cash(customer) >= new_pet["price"]
 
 
 def sell_pet_to_customer(pet_shop, pet, customer):
