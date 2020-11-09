@@ -109,4 +109,5 @@ def sell_pet_to_customer(pet_shop, pet, customer):
         #remove_pet_by_name(pet_shop, pet["name"])
         add_or_remove_cash(pet_shop, pet["price"])
         
-    
+    # The following should work, combining the two ifs above.
+    # if pet != None and customer_can_afford_pet(customer, pet):
