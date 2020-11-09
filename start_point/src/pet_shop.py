@@ -109,5 +109,8 @@ def sell_pet_to_customer(pet_shop, pet, customer):
         #remove_pet_by_name(pet_shop, pet["name"])
         add_or_remove_cash(pet_shop, pet["price"])
         
-    # The following should work, combining the two ifs above.
+    # The following should work, combining the two ifs above. I think
+    # my problem was that I had the check for None AFTER afford. The
+    # None check needs to come first (could have just used pet (as a boolean check)
+
     # if pet != None and customer_can_afford_pet(customer, pet):
